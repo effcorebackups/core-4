@@ -1,0 +1,14 @@
+pages
+- page_front
+    title: Front page
+    url
+      match: %^/$%
+    content
+    - block_welcome
+        type: text
+        value: Welcome to our site!<br/>Page <a href='/user/login'>Login</a>.<br/>EMail: admin@example.com<br/>Password: 12345.<br/>Page <a href='/install'>Install</a> for installation.<br/>Database Credentials: system/module_data/settings.data
+        region: content
+    - block_copyright
+        type: text
+        value: Copyright © 2017 Maxim Rysevets
+        region: footer
