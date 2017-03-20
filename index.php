@@ -10,6 +10,7 @@ namespace effectivecore {
   const dir_modules     = __DIR__.'/modules';
   const dir_system      = __DIR__.'/system';
   const nl              = "\n";
+  const br              = "<br/>";
 
   require_once('system/module_core/classes/class_abstract--core.php');
   core::init();
