@@ -1,6 +1,5 @@
 module
   id: menu
-  path: system/module_menu
   title: Menu
   description: Working with menus.
   version: 1.0

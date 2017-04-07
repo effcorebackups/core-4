@@ -1,6 +1,5 @@
 module
   id: page
-  path: system/module_page
   title: Page
   description: Working with pages and markup.
   version: 1.0
