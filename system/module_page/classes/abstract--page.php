@@ -49,13 +49,16 @@ namespace effectivecore\modules\page {
       if (isset($c_page->styles)) {
         foreach ($c_page->styles as $c_style) {
           $c_style_url = new url('/system/'.$c_page->module_id.'/'.$c_style->file);
-          static::add_element(new markup('style', [], '@import url("'.$c_style_url->get_full().'");'), 'styles');
+          static::add_element(new markup('link', [
+            'rel'   => 'stylesheet',
+            'media' => $c_style->media,
+            'href'  => $c_style_url->get_full()]), 'styles');
         }
       }
     # collect scripts
       if (isset($c_page->scripts)) {
         foreach ($c_page->scripts as $c_script) {
-          $c_script_url = new url('/modules/'.$c_page->module_id.'/'.$c_script->file);
+          $c_script_url = new url('/system/'.$c_page->module_id.'/'.$c_script->file);
           static::add_element(new markup('script', ['src' => $c_script_url->get_full()], ' '), 'script');
         }
       }
