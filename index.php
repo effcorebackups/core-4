@@ -12,7 +12,7 @@ namespace effectivecore {
   const nl              = "\n";
   const br              = "<br/>";
 
-  require_once('system/module_core/classes/abstract_global--events.php');
+  require_once('system/module_core/classes/gl--factory--events.php');
   require_once('system/module_core/classes/abstract_global--events_module.php');
   events_module::on_init();
 
