@@ -19,7 +19,7 @@ namespace effectivecore {
     else         return static::$data;
   }
 
-  static protected function _update() {
+  protected static function _update() {
     $parse = [];
     $files = files::get_all(dir_modules, '%^.*\.data$%') +
              files::get_all(dir_system, '%^.*\.data$%');
