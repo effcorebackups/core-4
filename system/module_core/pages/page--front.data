@@ -5,10 +5,10 @@ pages
       match: %^/$%
     content
     - block_welcome
+        region: c_1_1
         type: text
         content: Welcome to our site!<br/>Page <a href='/user/login'>Login</a>.<br/>EMail: admin@example.com<br/>Password: 12345.<br/>Page <a href='/install'>Install</a> for installation.<br/>Database Credentials: system/module_data/settings.data
-        region: content
     - block_copyright
+        region: f_1_1
         type: text
         content: Copyright © 2017 Maxim Rysevets
-        region: f_1_1
