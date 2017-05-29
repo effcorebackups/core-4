@@ -8,7 +8,7 @@ namespace effectivecore {
   static $data;
 
   static function init() {
-    $file = new file(dir_cache.'settings_new.php');
+    $file = new file(dir_cache.'settings.php');
     if ($file->is_exist()) {
       $file->insert();
     } else {
@@ -28,7 +28,7 @@ namespace effectivecore {
     }
   }
 
-  function get($group = '') {
+  function select($group = '') {
     if (!static::$data) static::init();
     if ($group)  return static::$data[$group];
     else         return static::$data;
@@ -36,11 +36,11 @@ namespace effectivecore {
 
   static function load_all_and_parse() {
     $return = [];
-    $files = files::get_all(dir_modules, '%^.*\._s$%') +
-             files::get_all(dir_settings, '%^.*\._s$%');
+    $files = files::get_all(dir_modules, '%^.*\.data$%') +
+             files::get_all(dir_settings, '%^.*\.data$%');
     $modules_path = [];
     foreach ($files as $c_file) {
-      if ($c_file->get_file_full() == 'module._s') {
+      if ($c_file->get_file_full() == 'module.data') {
         $modules_path[$c_file->get_dir_parent()] = $c_file->get_dirs_relative();
       }
     }
