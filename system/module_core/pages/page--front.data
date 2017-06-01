@@ -13,6 +13,6 @@ pages
         type: link
         link: trees/user/user
     - block_welcome
-        region: c_1_1
+        region: content_1_1
         type: text
         content: Welcome to our site!<br/>Page <a href='/user/login'>Login</a>.<br/>EMail: admin@example.com<br/>Password: 12345.<br/>Page <a href='/install'>Install</a> for installation.<br/>Database Credentials: system/module_storage/storages.data
