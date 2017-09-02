@@ -18,8 +18,9 @@ namespace effectivecore {
   const br              = "<br/>";
 
   require_once('system/module_core/backend/class--gl--file.php');
-  require_once('system/module_core/backend/factory--gl--timers.php');
   require_once('system/module_core/backend/factory--gl.php');
+  require_once('system/module_core/backend/factory--gl--events.php');
+  require_once('system/module_core/backend/factory--gl--timers.php');
   require_once('system/module_core/backend/factory--gl--caches.php');
   require_once('system/module_core/backend/factory--gl--files.php');
   require_once('system/module_core/backend/factory--gl--console.php');
@@ -88,8 +89,10 @@ namespace effectivecore {
 
   # case for page (non file)
   ob_start();
-  foreach (events::start('on_module_start') as $c_result) {
-    print str_replace("\n\n", '', $c_result);
+  foreach (events::start('on_module_start') as $c_results) {
+    foreach ($c_results as $c_result) {
+      print str_replace("\n\n", '', $c_result);
+    }
   }
 
 }
