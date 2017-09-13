@@ -16,8 +16,8 @@ namespace effectivecore {
   const dir_system      = __DIR__.'/system/';
   const nl              = "\n";
   const br              = "<br/>";
-  const state_0         = 0;
-  const state_1         = 1;
+  const phase_0         = 0;
+  const phase_1         = 1;
 
   require_once('system/module_core/backend/factory--gl.php');
   require_once('system/module_core/backend/factory--gl--timers.php');
