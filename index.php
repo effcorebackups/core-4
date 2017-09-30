@@ -21,7 +21,7 @@ namespace effectivecore {
   require_once('system/module_core/backend/factory--gl--timers.php');
   require_once('system/module_core/backend/factory--gl--console.php');
   require_once('system/module_core/backend/factory--gl--dynamic.php');
-  require_once('system/module_core/backend/factory--gl--caches.php');
+  require_once('system/module_core/backend/factory--gl--cache.php');
   require_once('system/module_core/backend/class--gl--file.php');
   require_once('system/module_core/backend/factory--gl--files.php');
   spl_autoload_register('\effectivecore\factory::autoload');
