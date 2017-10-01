@@ -54,7 +54,7 @@ namespace effectivecore {
                        $matches['name']] = $c_info;
         }
       }
-      cache::set('classes_map', $classes_map, true);
+      cache::set('classes_map', $classes_map, ['build' => date(format_datetime, time())]);
       return $classes_map;
     }
   }
