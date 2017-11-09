@@ -18,7 +18,7 @@ namespace effectivecore {
   const br              = "<br/>";
 
   require_once('system/module_core/backend/factory--gl.php');
-  require_once('system/module_core/backend/factory--gl--timers.php');
+  require_once('system/module_core/backend/factory--gl--timer.php');
   require_once('system/module_core/backend/factory--gl--console.php');
   require_once('system/module_core/backend/factory--gl--dynamic.php');
   require_once('system/module_core/backend/factory--gl--cache.php');
@@ -28,10 +28,10 @@ namespace effectivecore {
 
   use \effectivecore\urls_factory as urls;
   use \effectivecore\token_factory as token;
-  use \effectivecore\timers_factory as timers;
+  use \effectivecore\timer_factory as timer;
   use \effectivecore\events_factory as events;
   use \effectivecore\modules\storage\storages_factory as storages;
-  timers::tap('total');
+  timer::tap('total');
 
   # redirect from '/any_path/' to '/any_path'
   if (urls::get_current()->path != '/' && substr(urls::get_current()->path, -1) == '/') {
