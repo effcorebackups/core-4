@@ -26,7 +26,7 @@ namespace effectivecore {
   require_once('system/module_core/backend/factory--gl--files.php');
   spl_autoload_register('\effectivecore\factory::autoload');
 
-  use \effectivecore\urls_factory as urls;
+  use \effectivecore\url_factory as url;
   use \effectivecore\token_factory as token;
   use \effectivecore\timer_factory as timer;
   use \effectivecore\event_factory as event;
@@ -34,10 +34,9 @@ namespace effectivecore {
   timer::tap('total');
 
   # redirect from '/any_path/' to '/any_path'
-  if (urls::get_current()->path != '/' && substr(urls::get_current()->path, -1) == '/') {
-    urls::go(
-      rtrim(urls::get_current()->path, '/')
-    );
+  if (            url::get_current()->path != '/' &&
+           substr(url::get_current()->path, -1) == '/') {
+    url::go(rtrim(url::get_current()->path, '/'));
   }
 
   ##########################
@@ -50,7 +49,7 @@ namespace effectivecore {
       $file_types[$c_name] = $c_info;
     }
   }
-  $extension = urls::get_current()->get_extension();
+  $extension = url::get_current()->get_extension();
   if ($extension) {
   # case for protected files
     if (!empty($file_types[$extension]->protected)) {
@@ -59,7 +58,7 @@ namespace effectivecore {
       );
     }
   # case for media files
-    $path = dir_root.ltrim(urls::get_current()->path, '/');
+    $path = dir_root.ltrim(url::get_current()->path, '/');
     if (is_file($path) && is_readable($path)) {
       $file = new file($path);
       $data = $file->load();
