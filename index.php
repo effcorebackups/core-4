@@ -6,9 +6,6 @@
 
 namespace effectivecore {
 
-  const format_date     = 'Y-m-d';
-  const format_time     = 'H:i:s';
-  const format_datetime = 'Y-m-d H:i:s';
   const dir_root        = __DIR__.'/';
   const dir_cache       = __DIR__.'/dynamic/cache/';
   const dir_dynamic     = __DIR__.'/dynamic/';
