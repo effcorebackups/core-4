@@ -7,7 +7,6 @@
 namespace effectivecore {
           use \effectivecore\cache_factory as cache;
           use \effectivecore\console_factory as console;
-          use \effectivecore\file_factory as file_factory;
           abstract class factory {
 
   static $cache;
@@ -32,8 +31,8 @@ namespace effectivecore {
       return $cache;
     } else {
       $classes_map = [];
-      $files = file_factory::get_all(dir_modules, '%^.*\.php$%') +
-               file_factory::get_all(dir_system, '%^.*\.php$%');
+      $files = file::get_all(dir_modules, '%^.*\.php$%') +
+               file::get_all(dir_system, '%^.*\.php$%');
       foreach ($files as $c_file) {
         $matches = [];
         preg_match('%namespace (?<namespace>[a-z0-9_\\\\]+).*?'.

@@ -20,7 +20,6 @@ namespace effectivecore {
   require_once('system/module_core/backend/factory--gl--dynamic.php');
   require_once('system/module_core/backend/factory--gl--cache.php');
   require_once('system/module_core/backend/class--gl--file.php');
-  require_once('system/module_core/backend/factory--gl--file.php');
   spl_autoload_register('\effectivecore\factory::autoload');
 
   use \effectivecore\url_factory as url;
