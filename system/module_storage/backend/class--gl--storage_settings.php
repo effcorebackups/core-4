@@ -70,7 +70,7 @@ namespace effectivecore {
     $files = file::select_all(dir_modules, '%^.*\.data$%');
     $modules_path = [];
     foreach ($files as $c_file) {
-      if ($c_file->get_file_full() == 'module.data') {
+      if ($c_file->get_file() == 'module.data') {
         $modules_path[$c_file->get_name_parent()] = $c_file->get_dirs_relative();
       }
     }
