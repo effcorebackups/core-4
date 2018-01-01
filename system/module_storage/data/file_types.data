@@ -1,7 +1,9 @@
 file_types
 - data
+    type: data
     protected: 1
     headers
     - Content-type: text/data
 - sqlite
+    type: sqlite
     protected: 1

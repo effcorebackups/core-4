@@ -57,8 +57,9 @@ namespace effectivecore {
   if ($extension) {
   # case for protected files
     if (!empty($file_types[$extension]->protected)) {
-      factory::send_header_and_exit('access_denided',
-        'file with this extension is protected in file: file_types.data'.br.'go to <a href="/">front page</a>'
+      factory::send_header_and_exit('access_denided', '',
+        translation::get('file of this type is protected by: %%_name', ['name' => 'file_types.data']).br.
+        translation::get('go to <a href="/">front page</a>')
       );
     }
   # case for media files
