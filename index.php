@@ -16,6 +16,7 @@ namespace effectivecore {
   const dir_modules     = __DIR__.'/modules/';
   const dir_system      = __DIR__.'/system/';
   const nl              = "\n";
+  const tb              = "\t";
   const br              = "<br/>";
 
   require_once('system/module_core/backend/class_ab--gl--factory.php');
@@ -58,7 +59,7 @@ namespace effectivecore {
   # case for protected files
     if (!empty($file_types[$extension]->protected)) {
       factory::send_header_and_exit('access_denided', '',
-        translation::get('file of this type is protected by: %%_name', ['name' => 'file_types.data']).br.
+        translation::get('file of this type is protected by: %%_name', ['name' => 'file_types.data']).br.br.
         translation::get('go to <a href="/">front page</a>')
       );
     }
