@@ -29,8 +29,8 @@ namespace effectivecore {
       return $cache;
     } else {
       $classes_map = [];
-      $files = file::select_all(dir_modules, '%^.*\.php$%') +
-               file::select_all(dir_system, '%^.*\.php$%');
+      $files = file::select_all_recursive(dir_modules, '%^.*\.php$%') +
+               file::select_all_recursive(dir_system, '%^.*\.php$%');
       foreach ($files as $c_file) {
         $matches = [];
         preg_match('%namespace (?<namespace>[a-z0-9_\\\\]+).*?'.
