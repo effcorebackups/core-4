@@ -10,14 +10,14 @@ namespace effectivecore {
   ### single entry point ###
   ##########################
 
-  const dir_root        = __DIR__.'/';
-  const dir_cache       = __DIR__.'/dynamic/cache/';
-  const dir_dynamic     = __DIR__.'/dynamic/';
-  const dir_modules     = __DIR__.'/modules/';
-  const dir_system      = __DIR__.'/system/';
-  const nl              = "\n";
-  const tb              = "\t";
-  const br              = "<br/>";
+  const dir_root    = __DIR__.'/';
+  const dir_cache   = __DIR__.'/dynamic/cache/';
+  const dir_dynamic = __DIR__.'/dynamic/';
+  const dir_modules = __DIR__.'/modules/';
+  const dir_system  = __DIR__.'/system/';
+  const nl          = "\n";
+  const tb          = "\t";
+  const br          = "<br/>";
 
   require_once('system/module_core/backend/class_ab--gl--factory.php');
   require_once('system/module_core/backend/class_ab--gl--timer.php');
