@@ -25,9 +25,4 @@ pages
     - block_welcome
         region: main_1
         type: text
-        content: Welcome to site!
-    # ─────────────────────────────────────────────────────────────────────
-    - block_copyright
-        region: copyright
-        type: code
-        handler: \effectivecore\modules\core\events_page::on_show_block_copyright
+        content: Welcome to our site!
