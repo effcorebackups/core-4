@@ -4,6 +4,11 @@ file_types
     protected: 1
     headers
     - Content-type: text/html
+- sh
+    type: sh
+    protected: 1
+    headers
+    - Content-type: text/html
 - css
     type: css
     headers
