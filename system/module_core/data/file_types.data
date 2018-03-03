@@ -2,13 +2,9 @@ file_types
 - php
     type: php
     protected: 1
-    headers
-    - Content-type: text/html
 - sh
     type: sh
     protected: 1
-    headers
-    - Content-type: text/html
 - css
     type: css
     headers
@@ -39,6 +35,10 @@ file_types
     type: txt
     headers
     - Content-type: text/plain
+- md
+    type: md
+    headers
+    - Content-type: text/markdown
 - image
     type: image
     headers
