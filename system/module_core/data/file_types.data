@@ -1,26 +1,43 @@
 file_types
+# ─────────────────────────────────────────────────────────────────────
+# protected
+# ─────────────────────────────────────────────────────────────────────
 - php
     type: php
     protected: 1
 - sh
     type: sh
     protected: 1
-- css
-    type: css
-    headers
-    - Content-type: text/css
+- md
+    type: md
+    protected: 1
+# ─────────────────────────────────────────────────────────────────────
+# with tokens
+# ─────────────────────────────────────────────────────────────────────
 - cssd
     type: cssd
     use_tokens: 1
     headers
     - Content-type: text/css
-- js
-    type: js
+- svgd
+    type: svgd
+    use_tokens: 1
     headers
-    - Content-type: text/javascript
+    - Content-type: image/svg+xml
 - jsd
     type: jsd
     use_tokens: 1
+    headers
+    - Content-type: text/javascript
+# ─────────────────────────────────────────────────────────────────────
+# other types
+# ─────────────────────────────────────────────────────────────────────
+- css
+    type: css
+    headers
+    - Content-type: text/css
+- js
+    type: js
     headers
     - Content-type: text/javascript
 - html
@@ -35,21 +52,12 @@ file_types
     type: txt
     headers
     - Content-type: text/plain
-- md
-    type: md
-    headers
-    - Content-type: text/markdown
 - image
     type: image
     headers
     - Content-type: image/*
 - svg
     type: svg
-    headers
-    - Content-type: image/svg+xml
-- svgd
-    type: svgd
-    use_tokens: 1
     headers
     - Content-type: image/svg+xml
 - ico
