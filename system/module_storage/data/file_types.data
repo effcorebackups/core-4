@@ -3,7 +3,9 @@ file_types
     type: data
     protected: 1
     headers
-    - Content-type: text/data
+    - Content-type: text/html
 - sqlite
     type: sqlite
     protected: 1
+    headers
+    - Content-type: text/html
