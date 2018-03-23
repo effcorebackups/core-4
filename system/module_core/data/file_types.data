@@ -11,20 +11,15 @@ file_types
 - md
     type: md
     protected: 1
-- tpl
-    type: tpl
-    protected: 1
 - protected
     type: protected
+    protected: 1
+- tpl
+    type: tpl
     protected: 1
 # ─────────────────────────────────────────────────────────────────────
 # with tokens
 # ─────────────────────────────────────────────────────────────────────
-- cssd
-    type: cssd
-    use_tokens: 1
-    headers
-    - Content-type: text/css
 - svgd
     type: svgd
     use_tokens: 1
@@ -35,6 +30,11 @@ file_types
     use_tokens: 1
     headers
     - Content-type: application/javascript
+- cssd
+    type: cssd
+    use_tokens: 1
+    headers
+    - Content-type: text/css
 # ─────────────────────────────────────────────────────────────────────
 # other types
 # ─────────────────────────────────────────────────────────────────────
