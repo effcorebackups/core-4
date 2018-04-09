@@ -12,7 +12,7 @@ namespace effcore {
     if (empty($user->id)) {
       return new markup('x-block', ['id' => 'user_menu'], [
         storage::get('files')->select('trees/user/user_anonymous'),
-        new markup('img', ['id' => 'avatar', 'src' => '/system/module_page/frontend/avatar-anonymous.svgd'])
+        new markup('img', ['id' => 'avatar', 'src' => '/system/module_page/frontend/images/avatar-anonymous.svgd'])
       ]);
     } else {
       return new markup('x-block', ['id' => 'user_menu'], [
@@ -21,7 +21,7 @@ namespace effcore {
           new markup('img', [
             'id' => 'avatar',
             'src' => $user->avatar_path_relative ?
-                 '/'.$user->avatar_path_relative : '/system/module_page/frontend/avatar-logged_in.svgd']
+                 '/'.$user->avatar_path_relative : '/system/module_page/frontend/images/avatar-logged_in.svgd']
         ))
       ]);
     }
