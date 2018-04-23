@@ -65,7 +65,7 @@
   x-block.user_menu x-tree li {list-style: none; margin: 0; padding: 0}
   x-block.user_menu:hover x-tree {display: inline-block}
 
-  x-block.modules_admin td.state {vertical-align: top}
+  x-block.modules td.state {vertical-align: top}
 
   /* control elements */
   x-actions-control {display: block}
@@ -86,8 +86,8 @@
 
   /* file system icons */
   x-file-path {display: inline-block}
-  x-file-path x-directory {display: inline-block; padding: 3px 0 3px 32px; margin-right: 10px; cursor: default; background: url('images/icons-file_types._vector') no-repeat}
-  x-file-path x-file {display: inline-block; padding: 3px 0 3px 26px; cursor: default; background: url('images/icons-file_types._vector') no-repeat 0 -30px}
+  x-file-path x-directory {display: inline-block; padding: 3px 0 3px 32px; margin-right: 10px; cursor: default; background: url('images/icons-file_types.svgd') no-repeat}
+  x-file-path x-file {display: inline-block; padding: 3px 0 3px 26px; cursor: default; background: url('images/icons-file_types.svgd') no-repeat 0 -30px}
 
   /* menu with targets */
   x-targets {display: block}
