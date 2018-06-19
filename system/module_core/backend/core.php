@@ -9,9 +9,9 @@ namespace effcore {
 
   static protected $cache;
 
-  #########################
-  ### classes functions ###
-  #########################
+  #################################
+  ### functionality for classes ###
+  #################################
 
   static function autoload($name) {
     console::log_add('autoload', 'search', $name, 'ok');
@@ -107,9 +107,9 @@ namespace effcore {
                               $reflection->newInstanceWithoutConstructor();
   }
 
-  ######################
-  ### data functions ###
-  ######################
+  ##############################
+  ### functionality for data ###
+  ##############################
 
   static function string_to_data($string) {
   # ─────────────────────────────────────────────────────────────────────
@@ -192,9 +192,9 @@ namespace effcore {
     return $return;
   }
 
-  #######################
-  ### array functions ###
-  #######################
+  ################################
+  ### functionality for arrays ###
+  ################################
 
   static function array_rotate($data) {
     $return = [];
@@ -245,9 +245,9 @@ namespace effcore {
     }
   }
 
-  #####################################
-  ### mix of array/object functions ###
-  #####################################
+  #############################################
+  ### functionality for mix of array/object ###
+  #############################################
 
   static function &arrobj_value_select(&$data, $name) {
     if (gettype($data) == 'array')  return $data  [$name];
@@ -274,9 +274,9 @@ namespace effcore {
     return $return;
   }
 
-  #######################
-  ### dpath functions ###
-  #######################
+  ###############################
+  ### functionality for dpath ###
+  ###############################
 
   static function dpath_chain_get(&$data, $dpath) {
     $chain = [];
@@ -288,9 +288,9 @@ namespace effcore {
     return $chain;
   }
 
-  ###########################
-  ### date/time functions ###
-  ###########################
+  ###################################
+  ### functionality for date/time ###
+  ###################################
 
   # see: locale::format_time(...);
   # see: locale::format_date(...);
@@ -402,9 +402,9 @@ namespace effcore {
     return $value * 1024 ** $powers[$character];
   }
 
-  ####################
-  ### ip functions ###
-  ####################
+  ############################
+  ### functionality for ip ###
+  ############################
 
   static function ip_to_hex($ip) {
     $ip_parts_int = explode('.', $ip);
@@ -423,9 +423,9 @@ namespace effcore {
   }
 
 
-  ######################################
-  ### signatures/keys/hash functions ###
-  ######################################
+  ##############################################
+  ### functionality for signatures/keys/hash ###
+  ##############################################
 
   static function signature_get($string, $length = 40, $key_name) {
     $key = static::key_get($key_name);
@@ -453,9 +453,9 @@ namespace effcore {
     return $hex_time.$hex_rand;
   }
 
-  ########################
-  ### binary functions ###
-  ########################
+  #####################################
+  ### functionality for binary data ###
+  #####################################
 
   static function binstr_to_hexstr($binstr) {
     $hexstr = '';
