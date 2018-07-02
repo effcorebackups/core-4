@@ -125,7 +125,8 @@ namespace effcore {
     $return = [];
     $parsed = [];
     $modules_path = [];
-    $files = file::select_recursive(dir_system, '%^.*\\.data$%');
+    $files = file::select_recursive(dir_modules, '%^.*\\.data$%') +
+             file::select_recursive(dir_system, '%^.*\\.data$%');
     arsort($files);
   # parse each *.data file and collect modules path
     foreach ($files as $c_file) {
