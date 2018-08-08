@@ -231,7 +231,7 @@ namespace effcore {
           $c_item->weight = $c_weight -= .0001;
     }
   # sorting
-    uasort($array, function($a, $b){
+    uasort($array, function($a, $b) {
       return $a->weight == $b->weight ? 0 : ($a->weight < $b->weight ? 1 : -1);
     });
     return $array;
