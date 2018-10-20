@@ -2,17 +2,17 @@ file_types
 # ─────────────────────────────────────────────────────────────────────
 # protected types
 # ─────────────────────────────────────────────────────────────────────
-- protected
-    type: protected
+- md
+    type: md
     protected: 1
 - php
     type: php
     protected: 1
+- protected
+    type: protected
+    protected: 1
 - sh
     type: sh
-    protected: 1
-- md
-    type: md
     protected: 1
 - tpl
     type: tpl
