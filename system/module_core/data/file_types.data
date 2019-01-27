@@ -34,19 +34,19 @@ file_types
 # ─────────────────────────────────────────────────────────────────────
 - cssd
     type: cssd
-    dynamic: true
+    kind: dynamic
     headers
     - Content-type: text/css
     - X-Content-Type-Options: nosniff
 - jsd
     type: jsd
-    dynamic: true
+    kind: dynamic
     headers
     - Content-type: application/javascript
     - X-Content-Type-Options: nosniff
 - svgd
     type: svgd
-    dynamic: true
+    kind: dynamic
     headers
     - Content-type: image/svg+xml
 # ─────────────────────────────────────────────────────────────────────
