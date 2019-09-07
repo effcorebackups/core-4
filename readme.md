@@ -22,7 +22,7 @@ Author          : Maxim Rysevets
 Developer       : Maxim Rysevets
 Initial release : 2020-01-01
 Written in      : PHP
-Operating system: macOS, UNIX, Linux, Microsoft Windows
+Operating system: UNIX (Apple macOS, FreeBSD), Linux, Microsoft Windows
 License         : proprietary software
 Website         : http://effcore.com
 
