@@ -210,10 +210,6 @@ file_types
     type: mkv
     headers
     - Content-type: video/x-matroska
-- md
-    type: md
-    headers
-    - Content-type: text/markdown
 - mov
     type: mov
     headers
