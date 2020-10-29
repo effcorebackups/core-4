@@ -8,8 +8,20 @@ file_types
 - default
     type: default
     kind: protected
+- example
+    type: example
+    kind: protected
+- exe
+    type: exe
+    kind: protected
+- inc
+    type: inc
+    kind: protected
 - ini
     type: ini
+    kind: protected
+- lock
+    type: lock
     kind: protected
 - log
     type: log
@@ -17,8 +29,19 @@ file_types
 - md
     type: md
     kind: protected
+    headers
+    - Content-type: text/markdown
+- phar
+    type: phar
+    kind: protected
 - php
     type: php
+    kind: protected
+- po
+    type: po
+    kind: protected
+- profile
+    type: profile
     kind: protected
 - protected
     type: protected
@@ -26,8 +49,20 @@ file_types
 - sh
     type: sh
     kind: protected
+- sql
+    type: sql
+    kind: protected
 - tpl
     type: tpl
+    kind: protected
+- tmpl
+    type: tmpl
+    kind: protected
+- twig
+    type: twig
+    kind: protected
+- yml
+    type: yml
     kind: protected
 # ─────────────────────────────────────────────────────────────────────
 # dynamic types
@@ -107,6 +142,10 @@ file_types
     headers
     - Content-type: text/css
     - X-Content-Type-Options: nosniff
+- csv
+    type: csv
+    headers
+    - Content-type: text/csv
 - der
     type: der
     headers
@@ -204,6 +243,10 @@ file_types
     type: m4v
     headers
     - Content-type: video/x-m4v
+- map
+    type: map
+    headers
+    - Content-type: application/json
 - mid
     type: mid
     headers
@@ -398,6 +441,10 @@ file_types
     - Content-type: application/xhtml+xml
 - xml
     type: xml
+    headers
+    - Content-type: text/xml
+- xsd
+    type: xsd
     headers
     - Content-type: text/xml
 - zip
